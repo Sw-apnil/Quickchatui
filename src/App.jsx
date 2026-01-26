@@ -1,9 +1,33 @@
-import React from 'react'
+//import React, { useContext } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import ProfilePage from "./pages/ProfilePage";
+//import { Toaster } from "react-hot-toast";
+//import { AuthContext } from "../context/AuthContext";
 
-function App() {
+const App = () => {
+  //const { authUser, loading } = useContext(AuthContext);
+
+  //if (loading) return <div className="text-center p-10">Loading...</div>;
+
   return (
-    <div>App</div>
-  )
-}
-
-export default App
+    <div className="bg-[url('./assets/bgImage.svg')] bg-contain ">
+      <Routes>
+        <Route
+          path="/"
+          element={ <HomePage /> }
+        />
+        <Route
+          path="/login"
+          element={ <LoginPage /> }
+        />
+        <Route
+          path="/profile"
+          element={<ProfilePage />  }
+        />
+      </Routes>
+    </div>
+  );
+};
+export default App;
