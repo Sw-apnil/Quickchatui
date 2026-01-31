@@ -16,18 +16,25 @@ export const AuthProvider = ({ children }) => {
 
   // Check if user is authenticated and if so, set the user data and connect to socket
   const checkAuth = async () => {
-    try {
-      const { data } = await axios.get("api/auth/check"); // FIXED
-      if (data.success) {
-        setAuthUser(data.user);
-        connectSocket(data.user);
-      }
-    } catch (error) {
-      toast.error(error.message);
-    } finally {
-      setLoading(false); // NEW
+  try {
+    const { data } = await axios.get("api/auth/check");
+
+    if (data.success) {
+      setAuthUser(data.userData);
+      connectSocket(data.userData);
+    } else {
+      setAuthUser(null);
+      localStorage.removeItem("token");
     }
-  };
+  } catch (error) {
+    toast.error(error.message);
+    setAuthUser(null);
+    localStorage.removeItem("token");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   // Login function to handle user login and socket connection
   const login = async (state, credentials) => {

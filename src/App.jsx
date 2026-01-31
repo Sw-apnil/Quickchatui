@@ -6,13 +6,14 @@ import ProfilePage from "./pages/ProfilePage";
 import { Toaster } from "react-hot-toast";
 import { AuthContext } from "../context/AuthContext";
 
+
 const App = () => {
   const { authUser, loading } = useContext(AuthContext);
 
   if (loading) return <div className="text-center p-10">Loading...</div>;
 
   return (
-    <div className="bg-[url('/bgImage.svg')] bg-contain ">
+    <div className="min-h-screen bg-[url('./assets/bgImage.svg')] bg-contain ">
       <Toaster />
       <Routes>
         <Route
