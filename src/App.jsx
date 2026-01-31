@@ -1,10 +1,10 @@
-//import React, { useContext } from "react";
+import React, { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
-//import { Toaster } from "react-hot-toast";
-//import { AuthContext } from "../context/AuthContext";
+import { Toaster } from "react-hot-toast";
+import { AuthContext } from "../context/AuthContext";
 
 const App = () => {
   //const { authUser, loading } = useContext(AuthContext);
@@ -13,6 +13,7 @@ const App = () => {
 
   return (
     <div className="bg-[url('./assets/bgImage.svg')] bg-contain ">
+      <Toaster/>
       <Routes>
         <Route
           path="/"
