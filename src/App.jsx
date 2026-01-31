@@ -13,7 +13,7 @@ const App = () => {
   if (loading) return <div className="text-center p-10">Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-[url('./assets/bgImage.svg')] bg-contain ">
+    <div className="min-h-screen bg-[url('/bgImage.svg')] bg-contain ">
       <Toaster />
       <Routes>
         <Route
