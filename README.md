@@ -1,16 +1,117 @@
-# React + Vite
+# 🚀 QuickChat Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**QuickChat Frontend** is a modern real-time chat application client built with **React 19** and **Vite**, designed for speed, scalability, and an excellent developer experience. It connects to a backend server via **Socket.io** to deliver instant messaging with user authentication.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 Project Overview
 
-## React Compiler
+- **Name:** QuickChat Frontend  
+- **Type:** Real-time Chat Application (Client-side)  
+- **Build Tool:** Vite  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Core
+- **Framework:** React 19  
+- **Bundler:** Vite  
+
+### Styling
+- **Tailwind CSS v4** (via `@tailwindcss/vite`)  
+
+### Routing
+- **React Router DOM v7**
+
+### Networking
+- **Socket.io Client** – real-time communication  
+- **Axios** – HTTP requests  
+
+### UX Enhancements
+- **React Hot Toast** – notifications & alerts  
+
+### State Management
+- **React Context API**
+
+---
+
+## Project Structure
+
+src/
+├── components/        # Reusable UI components
+├── pages/             # Page-level components (Login, Signup, Chat)
+├── lib/               # Utility functions and helpers
+├── assets/            # Images and static resources
+├── context/           # Global state management
+│   ├── AuthContext.jsx  # Authentication state & logic
+│   └── ChatContext.jsx  # Chat messages & socket connection
+├── App.jsx
+├── main.jsx
+└── index.css  
+
+
+
+
+
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root and add:
+VITE_BACKEND_URL=http://localhost:3000
+
+Runs ESLint to maintain code quality.
+
+---
+
+## ✨ Key Features
+
+- 🔴 Real-time messaging with **Socket.io**
+- 🔐 User authentication (Login & Signup)
+- ⚡ Fast builds and dev experience with **Vite**
+- 🎨 Modern UI with **Tailwind CSS**
+- 🌐 Client-side routing using **React Router**
+- 🔔 Toast notifications via **React Hot Toast**
+
+---
+
+## 📌 Prerequisites
+
+- Node.js **v18+**
+- npm or pnpm
+- Running QuickChat Backend server
+
+---
+
+## 🚧 Future Enhancements
+
+- Group chats
+- Typing indicators
+- Read receipts
+- Online/offline user status
+- File and image sharing
+
+---
+
+## 📄 License
+
+This project is intended for learning and development purposes.  
+You may add an open-source license (MIT, Apache 2.0, etc.) if required.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome.  
+Feel free to fork the project and submit a pull request.
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
+
+
+
